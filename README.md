@@ -1,6 +1,4 @@
-# Arefandy waeouseng
-
-## เกี่ยวกับฉัน
+# Information
 
 **ชื่อ**: Arefandy waeouseng
 
