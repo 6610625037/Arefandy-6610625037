@@ -1,0 +1,418 @@
+/* Tailwind CSS Base */
+@import url('https://cdn.tailwindcss.com');
+
+/* Custom Variables */
+:root {
+    --primary-color: #10b981;
+    --secondary-color: #6b7280;
+    --tertiary-color: #1f2937;
+    --gradient-from: #f9fafb;
+    --gradient-to: #e5e7eb;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #f9fafb;
+    background: #374151;
+    min-height: 100vh;
+}
+
+/* Custom Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Header Styles */
+.header {
+    background: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid;
+    border-image: linear-gradient(90deg, var(--primary-color), var(--tertiary-color)) 1;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+}
+
+/* Main Content */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+.content-wrapper {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+/* Card Styles */
+.card {
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #e5e7eb;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-image-container {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.profile-image {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.profile-info {
+    flex: 1;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.profile-description {
+    color: #6b7280;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+
+/* Info Cards */
+.info-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.info-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+}
+
+.info-card.green {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border-color: #bbf7d0;
+    min-width: 400px;
+    flex: 1;
+    max-width: 600px;
+}
+
+.info-card-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.info-card.green .info-card-title {
+    color: #059669;
+}
+
+.info-card-content {
+    color: #10b981;
+}
+
+/* Interest Cards */
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.interest-card {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid;
+    transition: transform 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+}
+
+.interest-card.green {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border-color: #bbf7d0;
+}
+
+.interest-card.grey {
+    background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+    border-color: #d1d5db;
+}
+
+.interest-card.dark {
+    background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+    border-color: #9ca3af;
+}
+
+.interest-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+}
+
+.interest-card.green .interest-icon {
+    background: var(--primary-color);
+}
+
+.interest-card.grey .interest-icon {
+    background: var(--secondary-color);
+}
+
+.interest-card.dark .interest-icon {
+    background: var(--tertiary-color);
+}
+
+.interest-icon svg {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+
+.interest-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.interest-card.green .interest-title {
+    color: #059669;
+}
+
+.interest-card.grey .interest-title {
+    color: #4b5563;
+}
+
+.interest-card.dark .interest-title {
+    color: #374151;
+}
+
+.interest-description {
+    font-size: 0.875rem;
+}
+
+.interest-card.green .interest-description {
+    color: #10b981;
+}
+
+.interest-card.grey .interest-description {
+    color: #6b7280;
+}
+
+.interest-card.dark .interest-description {
+    color: #1f2937;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    flex: 1;
+}
+
+.skill-item:hover {
+    box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15);
+    border-color: var(--primary-color);
+}
+
+.skill-item span {
+    color: #1f2937;
+    font-weight: 500;
+}
+
+/* Contact Cards */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-2px);
+}
+
+.contact-card.green {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border-color: #bbf7d0;
+}
+
+.contact-card.grey {
+    background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+    border-color: #d1d5db;
+}
+
+.contact-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.contact-card.green .contact-icon {
+    background: var(--primary-color);
+}
+
+.contact-card.grey .contact-icon {
+    background: var(--secondary-color);
+}
+
+.contact-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+}
+
+.contact-info h3 {
+    font-weight: 600;
+}
+
+.contact-card.green .contact-info h3 {
+    color: #059669;
+}
+
+.contact-card.grey .contact-info h3 {
+    color: #4b5563;
+}
+
+.contact-info p {
+    color: #10b981;
+}
+
+.contact-card.grey .contact-info p {
+    color: #6b7280;
+}
+
+/* Footer */
+.footer {
+    background: #1f2937;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.footer-text {
+    color: #d1d5db;
+}
+
+.footer-subtext {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .main-title {
+        font-size: 4rem;
+    }
+    
+    .profile-section {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .profile-info {
+        text-align: left;
+    }
+    
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .interest-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
